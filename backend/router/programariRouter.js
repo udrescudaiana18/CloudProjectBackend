@@ -47,44 +47,5 @@ router.post("/", (req, res) => {
 
 });
 
-// // Delete a message
-// router.delete("/:id", (req, res) => {
-//     const { id } = req.params;
-//     connection.query(`DELETE FROM messages where entryID = ${mysql.escape(id)}`, (err, results) => {
-//         if (err) {
-//             console.log(err);
-//             return res.send(err);
-//         }
-//         return res.json({
-//             results,
-//         })
-//     })
-// });
-
-// router.put("/:id", (req, res) => {
-//     const { id } = req.params;
-//     const {
-//         senderName,
-//         senderMail,
-//         receiverMail,
-//         messageContent,
-//     } = req.body;
-
-//     if (!senderName || !senderMail || !receiverMail || !messageContent) {
-//         return res.status(400).json({
-//             error: "All fields are required",
-//         })
-//     }
-
-//     connection.query(`UPDATE messages SET senderName = ${mysql.escape(senderName)}, senderMail = ${mysql.escape(senderMail)}, receiverMail = ${mysql.escape(receiverMail)}, messageContent = ${mysql.escape(messageContent)} WHERE entryID = ${mysql.escape(id)}`, (err, results) => {
-//         if (err) {
-//             console.log(err);
-//             return res.send(err);
-//         }
-//         return res.json({
-//             results,
-//         })
-//     })
-// });
 
 module.exports = router;
